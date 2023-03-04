@@ -1,3 +1,9 @@
+# Uml Del proyecto
+
+![alt text](https://github.com/MaQuiNa1995/Entrevista_Tecnica_Hexagonal_Comercio/blob/master/doc/main_hexagonal.svg?raw=true)
+
+![alt text](https://github.com/MaQuiNa1995/Entrevista_Tecnica_Hexagonal_Comercio/blob/master/doc/other_hexagonal.svg?raw=true)
+
 # Prueba tecnica
 
 En la base de datos de comercio electrónico de la compañía disponemos de la tabla PRICES que refleja el precio final (pvp) y la tarifa que aplica a un producto de una cadena entre unas fechas determinadas.
