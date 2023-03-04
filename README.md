@@ -1,3 +1,8 @@
+# Métricas
+
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/442888e182654f06b199d057a1f2972f)](https://www.codacy.com/gh/MaQuiNa1995/Entrevista_Tecnica_Hexagonal_Comercio/dashboard?utm_source=github.com&utm_medium=referral&utm_content=MaQuiNa1995/Entrevista_Tecnica_Hexagonal_Comercio&utm_campaign=Badge_Coverage)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/442888e182654f06b199d057a1f2972f)](https://www.codacy.com/gh/MaQuiNa1995/Entrevista_Tecnica_Hexagonal_Comercio/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MaQuiNa1995/Entrevista_Tecnica_Hexagonal_Comercio&amp;utm_campaign=Badge_Grade)
+
 # Uml Del proyecto
 
 ![alt text](https://github.com/MaQuiNa1995/Entrevista_Tecnica_Hexagonal_Comercio/blob/master/doc/main_hexagonal.svg?raw=true)
