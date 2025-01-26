@@ -1,4 +1,4 @@
-# Indice
+# Índice
 
 1. [Medallas Métricas](#medallas-metricas)
 2. [Uml Del proyecto](#uml-del-proyecto)
