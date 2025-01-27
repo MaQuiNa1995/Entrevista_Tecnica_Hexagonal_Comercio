@@ -21,9 +21,6 @@ public class ProductController {
 	private final ProductPort productPort;
 	private final ProductResponseDtoFactory productResponseDtoFactory;
 	
-	/**
-	 * http://localhost:port/product/?actualDate=XXXXXX&productId=YYYYY&brandId=ZZZ
-	 */
 	@GetMapping
 	public ResponseEntity<ProductResponseDto> get(ProductRequestDto productBaseDto) {
 		
