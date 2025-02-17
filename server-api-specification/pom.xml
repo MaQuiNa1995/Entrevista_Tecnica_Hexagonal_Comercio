@@ -9,7 +9,7 @@
 		<version>1.0.0</version>
 	</parent>
 	
-	<artifactId>api-specification</artifactId>
+	<artifactId>server-api-specification</artifactId>
 	<modelVersion>4.0.0</modelVersion>
 	
 	<!-- properties -->

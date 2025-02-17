@@ -17,9 +17,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 import inditex.christian.business.domain.ProductDomain;
-import inditex.christian.infrastructure.common.entity.Product;
-import inditex.christian.infrastructure.common.entity.ProductPk;
-import inditex.christian.infrastructure.common.repository.ProductRepository;
+import inditex.christian.infrastructure.dao.product.entity.Product;
+import inditex.christian.infrastructure.dao.product.entity.ProductPk;
+import inditex.christian.infrastructure.dao.product.repository.ProductRepository;
 import inditex.christian.infrastructure.productport.dao.ProductDao;
 import inditex.christian.infrastructure.productport.factory.ProductDomainFactory;
 

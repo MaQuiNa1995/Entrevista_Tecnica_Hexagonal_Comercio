@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import inditex.christian.api.ProductApi;
 import inditex.christian.business.port.presentation.ProductPort;
 import inditex.christian.model.ProductResponseDto;
-import inditex.christian.presentation.product.factory.ProductResponseDtoFactory;
+import inditex.christian.presentation.product.mapper.ProductResponseDtoMapper;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -17,7 +17,7 @@ import lombok.RequiredArgsConstructor;
 public class ProductController implements ProductApi {
 
 	private final ProductPort productPort;
-	private final ProductResponseDtoFactory productResponseDtoFactory;
+	private final ProductResponseDtoMapper productResponseDtoFactory;
 	
 	@Override
 	public ResponseEntity<ProductResponseDto> productGet(Long productId, Integer brandId, LocalDateTime actualDate) {

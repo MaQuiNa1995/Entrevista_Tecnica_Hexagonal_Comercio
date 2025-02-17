@@ -7,8 +7,9 @@
     - 3.2. Se pide
     - 3.3. Recomendaciones
     - 3.4. Ejecución
-        - 3.4.1. Despliegue en docker
-        - 3.4.2. Ejecución de pruebas funcionales en postman
+        - 3.4.1. Compilacion
+        - 3.4.2. Despliegue en docker
+        - 3.4.3. Ejecución de pruebas funcionales en postman
 
 # medallas-metricas
 
@@ -90,12 +91,30 @@ Desarrollar unos test al endpoint rest que  validen las siguientes peticiones al
     
 ## ejecucion
 
+### compilacion
+
+Tendremos que ejecutar el siguiente comando en la raíz del proyecto que lo compilará y creará la imagen 
+
+`mvn clean install && cd application && mvn jib:dockerBuild`
+
+En caso de que no queramos crear la imagen bastaría con el siguiente comando en la raíz del proyecto:
+
+`mvn clean install`
+
+Imagenes de la compilacion y creacion de la imagen:
+
+![alt text](https://github.com/MaQuiNa1995/Entrevista_Tecnica_Hexagonal_Comercio/blob/master/doc/Ejecucion1.png?raw=true)
+
+![alt text](https://github.com/MaQuiNa1995/Entrevista_Tecnica_Hexagonal_Comercio/blob/master/doc/Ejecucion2.png?raw=true)
+
 ### despliegue-en-docker
 
-Teniendo previamente el entorno de docker levantado tendrás que ir a la raíz del proyecto y ejecutar el siguiente comando que creará y ejecutará la imagen
+Teniendo docker levantado ejecutaremos:
 
-`docker build --tag=pruebatecnica:1 . && docker run -p8080:8080 pruebatecnica:1`
+`docker run -p 8080:8080 christian-prueba-tecnica:1`
 
 ### ejecucion-de-pruebas-funcionales-en-postman
 
-Despues importaremos en postman la colección `Coleccion_Prueba_Tecnica.postman_collection.json` que está en la raíz del proyecto y ejecutaremos la colección 
+Despues importaremos en postman la colección `Coleccion_Prueba_Tecnica.postman_collection.json` que está en la carpeta `server-api-definition` en `la raíz del proyecto` y ejecutaremos la colección
+
+![alt text](https://github.com/MaQuiNa1995/Entrevista_Tecnica_Hexagonal_Comercio/blob/master/doc/Ejecucion3.png?raw=true)

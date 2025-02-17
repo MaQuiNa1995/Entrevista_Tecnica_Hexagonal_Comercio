@@ -9,7 +9,7 @@ import org.mapstruct.Mapping;
 import org.mapstruct.Named;
 
 import inditex.christian.business.domain.ProductDomain;
-import inditex.christian.infrastructure.common.entity.Product;
+import inditex.christian.infrastructure.dao.product.entity.Product;
 
 @Mapper
 public interface ProductDomainFactory {

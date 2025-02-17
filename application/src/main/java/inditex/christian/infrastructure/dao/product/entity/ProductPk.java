@@ -1,4 +1,4 @@
-package inditex.christian.infrastructure.common.entity;
+package inditex.christian.infrastructure.dao.product.entity;
 
 import java.io.Serializable;
 

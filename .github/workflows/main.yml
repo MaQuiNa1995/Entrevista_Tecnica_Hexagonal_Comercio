@@ -18,16 +18,13 @@ jobs:
       with:
         java-version: 17
 
-    - name: Maven Package
-      run: mvn package
+    - name: Maven Clean Package
+      run: mvn clean package
     - name: Codacy Coverage Reporter
-  # You may pin to the exact commit or the version.
   # uses: codacy/codacy-coverage-reporter-action@31721d7c5d2357955879f3ecbae83bf199c16000
       uses: codacy/codacy-coverage-reporter-action@v1.1.0
       with:
-      # API project token to retrieve your remote Codacy configuration for the project being analyzed
         project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-      # API account token to retrieve your remote Codacy configuration for the project being analyzed
         api-token: ${{ secrets.CODACY_TOKEN }}
       # Optional comma separated list of coverage reports to send to Codacy
-        coverage-reports: ./target/jacoco.xml
+        coverage-reports: ./application/target/jacoco.xml

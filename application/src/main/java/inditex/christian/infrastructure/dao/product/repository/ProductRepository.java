@@ -1,4 +1,4 @@
-package inditex.christian.infrastructure.common.repository;
+package inditex.christian.infrastructure.dao.product.repository;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import inditex.christian.infrastructure.common.entity.Product;
-import inditex.christian.infrastructure.common.entity.ProductPk;
+import inditex.christian.infrastructure.dao.product.entity.Product;
+import inditex.christian.infrastructure.dao.product.entity.ProductPk;
 
 public interface ProductRepository extends JpaRepository<Product, ProductPk> {
 

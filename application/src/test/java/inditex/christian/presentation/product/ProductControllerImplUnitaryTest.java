@@ -19,7 +19,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import inditex.christian.business.domain.ProductDomain;
 import inditex.christian.business.port.presentation.ProductPort;
 import inditex.christian.model.ProductResponseDto;
-import inditex.christian.presentation.product.factory.ProductResponseDtoFactory;
+import inditex.christian.presentation.product.mapper.ProductResponseDtoMapper;
 
 @AutoConfigureJsonTesters
 @WebMvcTest(ProductController.class)
@@ -35,7 +35,7 @@ public class ProductControllerImplUnitaryTest {
 	private ProductPort productPort;
 
 	@MockitoBean
-	private ProductResponseDtoFactory productResponseDtoFactory;
+	private ProductResponseDtoMapper productResponseDtoFactory;
 
 	@Test
 	void getTest() throws Exception {
