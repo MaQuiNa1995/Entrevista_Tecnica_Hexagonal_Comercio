@@ -18,8 +18,8 @@ jobs:
       with:
         java-version: 17
 
-    - name: Maven Clean Package
-      run: mvn clean package
+    - name: Maven Clean Install
+      run: mvn clean install
     - name: Codacy Coverage Reporter
   # uses: codacy/codacy-coverage-reporter-action@31721d7c5d2357955879f3ecbae83bf199c16000
       uses: codacy/codacy-coverage-reporter-action@v1.1.0
