@@ -10,6 +10,7 @@
         - 3.4.1. Compilacion
         - 3.4.2. Despliegue en docker
         - 3.4.3. Ejecución de pruebas funcionales en postman
+		- 3.4.4. Acceso a swagger-ui
 
 # medallas-metricas
 
@@ -118,3 +119,10 @@ Teniendo docker levantado ejecutaremos:
 Despues importaremos en postman la colección `Coleccion_Prueba_Tecnica.postman_collection.json` que está en la carpeta `server-api-definition` en `la raíz del proyecto` y ejecutaremos la colección
 
 ![alt text](https://github.com/MaQuiNa1995/Entrevista_Tecnica_Hexagonal_Comercio/blob/master/doc/Ejecucion3.png?raw=true)
+
+### swagger-ui
+
+Para acceder a swagger tendremos que ir a: http://localhost:8080/swagger-ui/index.html
+
+![alt text](https://github.com/MaQuiNa1995/Entrevista_Tecnica_Hexagonal_Comercio/blob/master/doc/swaggerui.png?raw=true)
+
