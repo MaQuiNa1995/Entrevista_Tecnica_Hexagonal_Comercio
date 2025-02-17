@@ -1,4 +1,4 @@
-package inditex.christian.infrastructure.productport.dao;
+package inditex.christian.infrastructure.product.port.dao;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -8,8 +8,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import inditex.christian.business.domain.ProductDomain;
 import inditex.christian.business.port.infrastructure.ProductRepositoryPort;
-import inditex.christian.infrastructure.dao.product.repository.ProductRepository;
-import inditex.christian.infrastructure.productport.factory.ProductDomainFactory;
+import inditex.christian.infrastructure.product.dao.repository.ProductRepository;
+import inditex.christian.infrastructure.product.port.factory.ProductDomainFactory;
 import lombok.RequiredArgsConstructor;
 
 @Service

@@ -1,4 +1,4 @@
-package inditex.christian.infrastructure.productport.factory;
+package inditex.christian.infrastructure.product.port.factory;
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
@@ -9,7 +9,7 @@ import org.mapstruct.Mapping;
 import org.mapstruct.Named;
 
 import inditex.christian.business.domain.ProductDomain;
-import inditex.christian.infrastructure.dao.product.entity.Product;
+import inditex.christian.infrastructure.product.dao.entity.Product;
 
 @Mapper
 public interface ProductDomainFactory {

@@ -1,4 +1,4 @@
-package inditex.christian.infrastructure.productport;
+package inditex.christian.infrastructure.product.dao.repository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.verify;
@@ -17,11 +17,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 import inditex.christian.business.domain.ProductDomain;
-import inditex.christian.infrastructure.dao.product.entity.Product;
-import inditex.christian.infrastructure.dao.product.entity.ProductPk;
-import inditex.christian.infrastructure.dao.product.repository.ProductRepository;
-import inditex.christian.infrastructure.productport.dao.ProductDao;
-import inditex.christian.infrastructure.productport.factory.ProductDomainFactory;
+import inditex.christian.infrastructure.product.dao.entity.Product;
+import inditex.christian.infrastructure.product.dao.entity.ProductPk;
+import inditex.christian.infrastructure.product.dao.repository.ProductRepository;
+import inditex.christian.infrastructure.product.port.dao.ProductDao;
+import inditex.christian.infrastructure.product.port.factory.ProductDomainFactory;
 
 @SpringBootTest
 public class ProductDaoTest {

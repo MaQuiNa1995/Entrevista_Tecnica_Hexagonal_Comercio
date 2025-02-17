@@ -1,4 +1,4 @@
-package inditex.christian.infrastructure.dao.product.entity;
+package inditex.christian.infrastructure.product.dao.entity;
 
 import java.io.Serializable;
 import java.sql.Timestamp;

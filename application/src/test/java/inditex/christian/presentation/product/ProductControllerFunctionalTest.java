@@ -61,12 +61,14 @@ class ProductControllerFunctionalTest {
 
 		// then
 		ProductResponseDto productDto = response.getBody();
-		Assertions.assertAll(() -> Assertions.assertEquals(HttpStatus.OK, response.getStatusCode()),
+		Assertions.assertAll(
+				() -> Assertions.assertEquals(HttpStatus.OK, response.getStatusCode()),
 				() -> Assertions.assertEquals(25.45D, productDto.getFinalPrice()),
 				() -> Assertions.assertEquals(date, productDto.getActualDate()),
 				() -> Assertions.assertEquals(brandId, productDto.getBrandId()),
 				() -> Assertions.assertEquals(2, productDto.getRateApplied()),
-				() -> Assertions.assertEquals("EUR", productDto.getCurrency()));
+				() -> Assertions.assertEquals("EUR", productDto.getCurrency())
+		);
 	}
 
 	@Test
