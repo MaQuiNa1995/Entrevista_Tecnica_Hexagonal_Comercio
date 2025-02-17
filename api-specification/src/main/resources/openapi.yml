@@ -1,0 +1,78 @@
+openapi: "3.0.1"
+info:
+  title: Product API
+  version: '1.0'
+  description: API para gestionar productos
+paths:
+  /product:
+    get:
+      summary: Obtener productos
+      description: Obtiene una lista de productos según los parámetros proporcionados.
+      parameters:
+        - in: query
+          name: productId
+          schema:
+            type: integer
+            format: int64
+          description: ID del producto
+          required: true
+        - in: query
+          name: brandId
+          schema:
+            type: integer
+          description: ID de la marca
+          required: true
+        - in: query
+          name: actualDate
+          schema:
+            type: string
+            format: time
+          description: Fecha actual (formato ISO 8601)
+          required: true
+      responses:
+        '200':
+          description: Productos encontrados
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductResponseDto'
+        '204':
+          description: No se encontraron productos
+components:
+  schemas:
+    ProductResponseDto:
+      type: object
+      properties:
+        rateApplied:
+          type: integer
+          description: Tarifa aplicada
+          example: 12
+        finalPrice:
+          type: number
+          format: double
+          description: Precio final
+          example: 50.5
+        currency:
+          type: string
+          description: Moneda
+          example: EUR
+        actualDate:
+          type: string
+          format: time
+          description: Fecha actual (formato ISO 8601)
+          example: 2020-06-14T10:00
+        productId:
+          type: integer
+          format: int64
+          description: ID del producto
+          example: 35455
+        brandId:
+          type: integer
+          description: ID de la marca
+          example: 1
+      required:
+        - finalPrice
+        - currency
+        - actualDate
+        - productId
+        - brandId
