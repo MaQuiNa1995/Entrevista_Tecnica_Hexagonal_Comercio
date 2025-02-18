@@ -402,7 +402,7 @@
 			"response": []
 		},
 		{
-			"name": "Test 6: No Content",
+			"name": "Test 6: 400 y Body Vacío",
 			"event": [
 				{
 					"listen": "test",
@@ -410,6 +410,10 @@
 						"exec": [
 							"pm.test(\"Status code is 204\", function () {\r",
 							"    pm.response.to.have.status(204);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body is empty\", function () {\r",
+							"    pm.expect(pm.response.text()).to.be.empty;\r",
 							"});"
 						],
 						"type": "text/javascript",
@@ -450,7 +454,7 @@
 			"response": []
 		},
 		{
-			"name": "Test 7: Formato de Fecha Invalido",
+			"name": "Test 7:  400 Formato de Fecha Invalido",
 			"event": [
 				{
 					"listen": "test",
@@ -460,6 +464,15 @@
 							"\r",
 							"pm.test(\"Status code is 400\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response body is correct\", function () {\r",
+							"    pm.expect(jsonData).to.be.an('object');\r",
+							"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
+							"    pm.expect(jsonData.detail).to.eql(\"Parameter actualDate with value 2020-06-14 cannot be converted to required type class java.time.LocalDateTime\");\r",
+							"    pm.expect(jsonData.property).to.eql(\"actualDate\");\r",
+							"    pm.expect(jsonData.badValue).to.eql(\"2020-06-14\");\r",
+							"    pm.expect(jsonData.requiredType).to.eql(\"java.time.LocalDateTime\");\r",
 							"});"
 						],
 						"type": "text/javascript",
@@ -500,7 +513,7 @@
 			"response": []
 		},
 		{
-			"name": "Test 8: Formato de productId no Válido",
+			"name": "Test 8: 400 Formato de productId no Válido",
 			"event": [
 				{
 					"listen": "test",
@@ -510,6 +523,15 @@
 							"\r",
 							"pm.test(\"Status code is 400\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response body is correct\", function () {\r",
+							"    pm.expect(jsonData).to.be.an('object');\r",
+							"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
+							"    pm.expect(jsonData.detail).to.eql(\"Parameter productId with value 35455.99 cannot be converted to required type class java.lang.Long\");\r",
+							"    pm.expect(jsonData.property).to.eql(\"productId\");\r",
+							"    pm.expect(jsonData.badValue).to.eql(\"35455.99\");\r",
+							"    pm.expect(jsonData.requiredType).to.eql(\"java.lang.Long\");\r",
 							"});"
 						],
 						"type": "text/javascript",
@@ -550,7 +572,7 @@
 			"response": []
 		},
 		{
-			"name": "Test 9: Petición Sin ActualDate",
+			"name": "Test 9: 400 Petición Sin ActualDate",
 			"event": [
 				{
 					"listen": "test",
@@ -560,6 +582,11 @@
 							"\r",
 							"pm.test(\"Status code is 400\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response body is correct\", function () {\r",
+							"    pm.expect(jsonData).to.be.an('object');\r",
+							"    pm.expect(jsonData.detail).to.eql(\"Required parameter 'actualDate' is not present.\");\r",
 							"});"
 						],
 						"type": "text/javascript",
