@@ -1,0 +1,626 @@
+{
+	"info": {
+		"_postman_id": "10d634b4-b489-44be-b37d-1efd2fcbde4b",
+		"name": "Colección Prueba Técnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4228716"
+	},
+	"item": [
+		{
+			"name": "Test 1: 10:00, Día 14, Producto 35455, ZARA",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response body has correct structure and values\", function () {\r",
+							"    pm.expect(jsonData).to.be.an(\"object\");\r",
+							"\r",
+							"    pm.expect(jsonData).to.have.all.keys([\r",
+							"        \"actualDate\",\r",
+							"        \"productId\",\r",
+							"        \"brandId\",\r",
+							"        \"rateApplied\",\r",
+							"        \"finalPrice\",\r",
+							"        \"currency\"\r",
+							"    ]);\r",
+							"\r",
+							"    pm.expect(jsonData.actualDate).to.eql(\"2020-06-14T10:00:00\");\r",
+							"    pm.expect(jsonData.productId).to.eql(35455);\r",
+							"    pm.expect(jsonData.brandId).to.eql(1);\r",
+							"    pm.expect(jsonData.rateApplied).to.eql(1);\r",
+							"    pm.expect(jsonData.finalPrice).to.eql(35.5);\r",
+							"    pm.expect(jsonData.currency).to.eql(\"EUR\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Data types are correct\", function () {\r",
+							"    pm.expect(jsonData.actualDate).to.be.a(\"string\");\r",
+							"    pm.expect(jsonData.productId).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.brandId).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.rateApplied).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.finalPrice).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.currency).to.be.a(\"string\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product?productId=35455&brandId=1&actualDate=2020-06-14T10:00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "35455"
+						},
+						{
+							"key": "brandId",
+							"value": "1"
+						},
+						{
+							"key": "actualDate",
+							"value": "2020-06-14T10:00:00"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --request GET \\\n  \"{{baseUrl}}/product/price?productId=35455&brandId=1&actualDate=2020-07-14T10:00:00\""
+			},
+			"response": []
+		},
+		{
+			"name": "Test 2: 16:00, Día 14, Producto 35455, ZARA",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response body has correct structure and values\", function () {\r",
+							"    pm.expect(jsonData).to.be.an(\"object\");\r",
+							"\r",
+							"    pm.expect(jsonData).to.have.all.keys([\r",
+							"        \"actualDate\",\r",
+							"        \"productId\",\r",
+							"        \"brandId\",\r",
+							"        \"rateApplied\",\r",
+							"        \"finalPrice\",\r",
+							"        \"currency\"\r",
+							"    ]);\r",
+							"\r",
+							"    pm.expect(jsonData.actualDate).to.eql(\"2020-06-14T16:00:00\");\r",
+							"    pm.expect(jsonData.productId).to.eql(35455);\r",
+							"    pm.expect(jsonData.brandId).to.eql(1);\r",
+							"    pm.expect(jsonData.rateApplied).to.eql(2);\r",
+							"    pm.expect(jsonData.finalPrice).to.eql(25.45);\r",
+							"    pm.expect(jsonData.currency).to.eql(\"EUR\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Data types are correct\", function () {\r",
+							"    pm.expect(jsonData.actualDate).to.be.a(\"string\");\r",
+							"    pm.expect(jsonData.productId).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.brandId).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.rateApplied).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.finalPrice).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.currency).to.be.a(\"string\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product?productId=35455&brandId=1&actualDate=2020-06-14T16:00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "35455"
+						},
+						{
+							"key": "brandId",
+							"value": "1"
+						},
+						{
+							"key": "actualDate",
+							"value": "2020-06-14T16:00:00"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --request GET \\\r\n  \"{{baseUrl}}/product/price?productId=35455&brandId=1&actualDate=2024-07-14T16:00:00\"\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 3: 21:00, Día 14, Producto 35455, ZARA",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response body has correct structure and values\", function () {\r",
+							"    pm.expect(jsonData).to.be.an(\"object\");\r",
+							"\r",
+							"    pm.expect(jsonData).to.have.all.keys([\r",
+							"        \"actualDate\",\r",
+							"        \"productId\",\r",
+							"        \"brandId\",\r",
+							"        \"rateApplied\",\r",
+							"        \"finalPrice\",\r",
+							"        \"currency\"\r",
+							"    ]);\r",
+							"\r",
+							"    pm.expect(jsonData.actualDate).to.eql(\"2020-06-14T21:00:00\");\r",
+							"    pm.expect(jsonData.productId).to.eql(35455);\r",
+							"    pm.expect(jsonData.brandId).to.eql(1);\r",
+							"    pm.expect(jsonData.rateApplied).to.eql(1);\r",
+							"    pm.expect(jsonData.finalPrice).to.eql(35.5);\r",
+							"    pm.expect(jsonData.currency).to.eql(\"EUR\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Data types are correct\", function () {\r",
+							"    pm.expect(jsonData.actualDate).to.be.a(\"string\");\r",
+							"    pm.expect(jsonData.productId).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.brandId).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.rateApplied).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.finalPrice).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.currency).to.be.a(\"string\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product?productId=35455&brandId=1&actualDate=2020-06-14T21:00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "35455"
+						},
+						{
+							"key": "brandId",
+							"value": "1"
+						},
+						{
+							"key": "actualDate",
+							"value": "2020-06-14T21:00:00"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --request GET \\\r\n  \"{{baseUrl}}/product/price?productId=35455&brandId=1&actualDate=2024-07-14T21:00:00\"\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 4: 10:00, Día 15, Producto 35455, ZARA",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response body has correct structure and values\", function () {\r",
+							"    pm.expect(jsonData).to.be.an(\"object\");\r",
+							"\r",
+							"    pm.expect(jsonData).to.have.all.keys([\r",
+							"        \"actualDate\",\r",
+							"        \"productId\",\r",
+							"        \"brandId\",\r",
+							"        \"rateApplied\",\r",
+							"        \"finalPrice\",\r",
+							"        \"currency\"\r",
+							"    ]);\r",
+							"\r",
+							"    pm.expect(jsonData.actualDate).to.eql(\"2020-06-15T10:00:00\");\r",
+							"    pm.expect(jsonData.productId).to.eql(35455);\r",
+							"    pm.expect(jsonData.brandId).to.eql(1);\r",
+							"    pm.expect(jsonData.rateApplied).to.eql(3);\r",
+							"    pm.expect(jsonData.finalPrice).to.eql(30.5);\r",
+							"    pm.expect(jsonData.currency).to.eql(\"EUR\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Data types are correct\", function () {\r",
+							"    pm.expect(jsonData.actualDate).to.be.a(\"string\");\r",
+							"    pm.expect(jsonData.productId).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.brandId).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.rateApplied).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.finalPrice).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.currency).to.be.a(\"string\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product?productId=35455&brandId=1&actualDate=2020-06-15T10:00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "35455"
+						},
+						{
+							"key": "brandId",
+							"value": "1"
+						},
+						{
+							"key": "actualDate",
+							"value": "2020-06-15T10:00:00"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --request GET \\\r\n  \"{{baseUrl}}/product/price?productId=35455&brandId=1&actualDate=2024-07-15T10:00:00\"\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 5: 21:00, Día 16, Producto 35455, ZARA",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response body has correct structure and values\", function () {\r",
+							"    pm.expect(jsonData).to.be.an(\"object\");\r",
+							"\r",
+							"    pm.expect(jsonData).to.have.all.keys([\r",
+							"        \"actualDate\",\r",
+							"        \"productId\",\r",
+							"        \"brandId\",\r",
+							"        \"rateApplied\",\r",
+							"        \"finalPrice\",\r",
+							"        \"currency\"\r",
+							"    ]);\r",
+							"\r",
+							"    pm.expect(jsonData.actualDate).to.eql(\"2020-06-16T21:00:00\");\r",
+							"    pm.expect(jsonData.productId).to.eql(35455);\r",
+							"    pm.expect(jsonData.brandId).to.eql(1);\r",
+							"    pm.expect(jsonData.rateApplied).to.eql(4);\r",
+							"    pm.expect(jsonData.finalPrice).to.eql(38.95);\r",
+							"    pm.expect(jsonData.currency).to.eql(\"EUR\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Data types are correct\", function () {\r",
+							"    pm.expect(jsonData.actualDate).to.be.a(\"string\");\r",
+							"    pm.expect(jsonData.productId).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.brandId).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.rateApplied).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.finalPrice).to.be.a(\"number\");\r",
+							"    pm.expect(jsonData.currency).to.be.a(\"string\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product?productId=35455&brandId=1&actualDate=2020-06-16T21:00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "35455"
+						},
+						{
+							"key": "brandId",
+							"value": "1"
+						},
+						{
+							"key": "actualDate",
+							"value": "2020-06-16T21:00:00"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --request GET \\\r\n  \"{{baseUrl}}/product/price?productId=35455&brandId=1&actualDate=2024-07-16T21:00:00\""
+			},
+			"response": []
+		},
+		{
+			"name": "Test 6: 400 y Body Vacío",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body is empty\", function () {\r",
+							"    pm.expect(pm.response.text()).to.be.empty;\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product?productId=6&brandId=2&actualDate=2024-06-16T21:00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "6"
+						},
+						{
+							"key": "brandId",
+							"value": "2"
+						},
+						{
+							"key": "actualDate",
+							"value": "2024-06-16T21:00:00"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --request GET \\\r\n  \"{{baseUrl}}/product/price?productId=35455&brandId=1&actualDate=2024-07-16T21:00:00\""
+			},
+			"response": []
+		},
+		{
+			"name": "Test 7:  400 Formato de Fecha Invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response body is correct\", function () {\r",
+							"    pm.expect(jsonData).to.be.an('object');\r",
+							"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
+							"    pm.expect(jsonData.detail).to.eql(\"Parameter actualDate with value 2020-06-14 cannot be converted to required type class java.time.LocalDateTime\");\r",
+							"    pm.expect(jsonData.property).to.eql(\"actualDate\");\r",
+							"    pm.expect(jsonData.badValue).to.eql(\"2020-06-14\");\r",
+							"    pm.expect(jsonData.requiredType).to.eql(\"java.time.LocalDateTime\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product?productId=35455&brandId=1&actualDate=2020-06-14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "35455"
+						},
+						{
+							"key": "brandId",
+							"value": "1"
+						},
+						{
+							"key": "actualDate",
+							"value": "2020-06-14"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --request GET \\\n  \"{{baseUrl}}/product/price?productId=35455&brandId=1&actualDate=2020-07-14T10:00:00\""
+			},
+			"response": []
+		},
+		{
+			"name": "Test 8: 400 Formato de productId no Válido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response body is correct\", function () {\r",
+							"    pm.expect(jsonData).to.be.an('object');\r",
+							"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
+							"    pm.expect(jsonData.detail).to.eql(\"Parameter productId with value 35455.99 cannot be converted to required type class java.lang.Long\");\r",
+							"    pm.expect(jsonData.property).to.eql(\"productId\");\r",
+							"    pm.expect(jsonData.badValue).to.eql(\"35455.99\");\r",
+							"    pm.expect(jsonData.requiredType).to.eql(\"java.lang.Long\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product?productId=35455.99&brandId=1&actualDate=2020-06-16T21:00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "35455.99"
+						},
+						{
+							"key": "brandId",
+							"value": "1"
+						},
+						{
+							"key": "actualDate",
+							"value": "2020-06-16T21:00:00"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --request GET \\\n  \"{{baseUrl}}/product/price?productId=35455&brandId=1&actualDate=2020-07-14T10:00:00\""
+			},
+			"response": []
+		},
+		{
+			"name": "Test 9: 400 Petición Sin ActualDate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response body is correct\", function () {\r",
+							"    pm.expect(jsonData).to.be.an('object');\r",
+							"    pm.expect(jsonData.detail).to.eql(\"Required parameter 'actualDate' is not present.\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product?productId=35455&brandId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "35455"
+						},
+						{
+							"key": "brandId",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --request GET \\\n  \"{{baseUrl}}/product/price?productId=35455&brandId=1&actualDate=2020-07-14T10:00:00\""
+			},
+			"response": []
+		}
+	]
+}
